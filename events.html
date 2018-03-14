@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="css/style.css">
+    <title>JegyBazár | Események</title>
+    <link rel="icon" href="ticket.png">
+  </head>
+  <body>
+<div class="container">
+  <h3>Jegybazar</h3>
+    <nav class="navbar navbar-expand-md navbar-light rounded mb-3 bg-light">
+      <a class="navbar-brand" href="index.html"><img src="ticket.png" width="30px" alt=""></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+       <ul class="navbar-nav text-md-center nav-justified w-100">
+          <li class="nav-item ">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="events.html">Események</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tickets.html">Jegyek</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">Rólunk</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Belépés</a>
+          </li>
+        </ul>
+        
+      </div>
+    </nav>
+
+    
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <div class="container text-md-center">
+          <h1 >Események</h1>
+          <p class="lead">Itt találod az események táblázatát. Ha érdekel egy akkor innen azonnal tovább tudsz ugrani a jegyvásárlásra. Jó szórakozást!</p>
+          <p><a class="btn btn-success btn-lg" href="tickets.html" role="button"><i class="fas fa-ticket-alt"></i> Jegyek </a></p>
+        </div>
+      </div>
+
+      <div class="row events-search-row">
+        <div class="input-group col-12">
+          <input type="text" class="form-control" placeholder="keresés..." aria-label="Keresés" aria-describedby="basic-addon2">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button">Search</button>
+          </div>
+        </div>
+      </div>
+     
+
+      <div class="container">
+        <div class="card-deck events-card-deck">
+          <a href="tickets.html?event=1" class="card">
+            <img class="card-img-top" src="https://pb2.jegy.hu/imgs/system-4/program/000/073/119/sziget-fesztival-2-napijegy-aug-12-474-279-84252.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Sziget Fesztivál </h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              <p><button class="btn btn-link float-right pos">Tovább</button></p>
+            </div>
+          </a>
+          <a href="tickets.html?event=2" class="card">
+            <img class="card-img-top" src="http://www.kate.hu/wp-content/uploads/2015/07/135599150312020929_fezen_2015_datummal.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Fezen</h5>
+              <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              <p><button class="btn btn-link float-right pos">Tovább</button></p>
+            </div>
+          </a>
+          <a href="tickets.html?event=3" class="card">
+            <img class="card-img-top" src="http://m.blog.hu/so/sound-check/image/sound17_rockstar-1749.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Balaton Sound</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              <p><button class="btn btn-link float-right pos">Tovább</button></p>
+            </div>
+          </a>
+        </div>
+
+      </div> <!-- /container -->
+
+  
+    <footer class="container">
+      <p>&copy; Company 2017-2018</p>
+    </footer>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="lib/jquery-3.2.1.slim.min.js"  ></script>
+    <script src="lib/popper.min.js" ></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script>
+    $(".events-search-row input").on("keyup", function(ev) {
+      $.each($(".events-card-deck .card .card-title"), function(i, e){
+        var elem = $(e);
+        var search = ev.target.value.toLowerCase();
+        var content = elem.html().toLowerCase();
+		    if( content.indexOf(search) === -1 ) {
+	    elem.parents(".card").hide();
+        } else {
+    	elem.parents(".card").show();
+}
+} )
+});
+    </script>
+  </body>
+</html>

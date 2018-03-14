@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://use.fontawesome.com/releases/v5.0.7/css/all.css');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    padding-top: 20px;
+    min-height: 100%;
+}
+.lead{
+    font-weight: 100;
+}
+.home-media-image{
+    width: 25%;
+}
+
+
+/* login page */
+.row-login-form{
+    margin-top: 50px;
+}
+
+/* regPage */
+.marBot {
+    margin-bottom: 20px;
+}
+/* events page */
+.events-card-deck .card{
+    box-shadow: 0 0 2px;
+    color: black;
+    text-decoration: none;
+}
+
+.events-card-deck .card:hover {
+    cursor: pointer;
+    box-shadow: 1px 1px 5px;
+}
+.pos{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+.events-card-deck .card .btn-link:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+.events-search-row{
+    margin-bottom: 20px;
+}

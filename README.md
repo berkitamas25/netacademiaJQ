@@ -1,1 +1,1 @@
-"# netacademiaJQ" 
+NetAcademia jQuery tanfolyam

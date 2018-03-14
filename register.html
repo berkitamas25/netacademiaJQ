@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="css/style.css">
+    <title>JegyBazár | Regisztráció</title>
+    <link rel="icon" href="ticket.png">
+  </head>
+  <body>
+<div class="container">
+  <h3 class="text-muted">Jegybazar</h3>
+    <nav class="navbar navbar-expand-md navbar-light rounded mb-3 bg-light">
+      <a class="navbar-brand" href="index.html"><img src="ticket.png" width="30px" alt=""></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+         <ul class="navbar-nav text-md-center nav-justified w-100">
+          <li class="nav-item ">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="events.html">Események</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tickets.html">Jegyek</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">Rólunk</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="login.html">Belépés</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- regform -->
+<div class="row justify-content-center row-login-form ">
+  <div class="col-10 col-sm-8 col-md-6 col-lg-6 ">
+    <!-- alert message -->
+    <div class="alert alert-primary alert-dismissible fade show text-center" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          Regisztrálj be és már veheted is a jegyeket!
+        </div>
+        <!-- /alert message -->
+    <div class="card border-secondary">
+      <div class="card-header text-center"><h2>Regisztráció</h2></div>
+      <div class="card-body">
+          <form class="form-signin" id="regForm"> 
+              <div class="form-group">
+                  <label for="regName" class="text-left">Név</label>
+                  <input type="text" name="registName" id="regName" class="form-control" placeholder="Név" required autofocus>
+                </div>
+                <div class="form-group">
+                    <label for="regAddress" class="text-left">Cím</label>
+                    <input type="text" name="registAddress" id="regAddress" class="form-control" placeholder="Cím" required>
+                  </div>
+                  <div class="form-group">
+                    <label class="text-left" for="birthDate">Születési idő</label>
+                    <input class="form-control" name="registDate" type="date" id="birthDate" value="2000-03-01" min="1918-01-01" 
+                    max="2010-01-01" required>
+                  </div>
+                  <div class="form-group">
+                  <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="sex" id="sexRadio1" value="female"  checked>
+                      <label class="form-check-label" for="sexRadio1">
+                        Nő
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="sex" id="sexRadio2" value="male">
+                      <label class="form-check-label" for="sexRadio2">
+                        Férfi
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                      <select name="locationSelect" class="custom-select">
+                          <option value="notset" selected>Milyen településen laksz?</option>
+                          <option value="1">Főváros</option>
+                          <option value="2">Megyeszékhely</option>
+                          <option value="3">Kistelepülés</option>
+                        </select>
+                  </div>
+              <div class="form-group">
+                <label for="regEmail" >Email cím</label>
+                <input type="email" name="registEmail" id="regEmail" class="form-control" placeholder="Email cím" required >
+              </div>
+              <div class="form-group">
+                <label>Profilkép</label>
+                <div class="text-center marBot">
+                  <img class="img-fluid" src="https://www.sonypark360.net/wp-content/uploads/2017/08/profile-pictures.png" alt="profile picture">
+                </div>
+              
+                  <div class="custom-file">
+                      <input name="avatar" type="file" class="custom-file-input" id="customFile" accept="image/*">
+                      <label class="custom-file-label" for="customFile">Válassz fájlt...</label>
+                    </div>
+              </div>
+                <div class="form-group">
+                <label for="regPassword" class="text-left">Jelszó</label>
+                <input type="password" name="registPass" id="regPassword" class="form-control" 
+                placeholder="Jelszó" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                title="Kis és nagy betű és szám, legalább 8 karakter hosszan" required>
+              </div>
+                <div class="form-group">
+                <label for="regPasswordAgain" class="text-left">Jelszó újra</label>
+                <input type="password" name="registPassAgain" id="regPasswordAgain" class="form-control" placeholder="Jelszó újra" required>
+              </div>
+              <button class="btn btn-lg btn-primary btn-block" type="submit">Regisztráció</button>
+            </form>
+      </div>
+    </div>
+      
+  </div>
+</div>
+<!-- /regform -->
+    
+    <div class="container text-center">
+    <footer class="footer">
+      <p>&copy; Company 2017-2018</p>
+    </footer>
+  </div>
+  </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="lib/jquery-3.2.1.slim.min.js"  ></script>
+    <script src="lib/popper.min.js" ></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script>
+    $(".custom-file").on("change", function(ev) {
+      var name = ev.target.value.split("\\").pop();
+      var path = URL.createObjectURL(ev.target.files[0]);
+      $(this).find(".custom-file-label").html(name);
+      $(".img-fluid").attr("src", path);
+    })
+
+
+    //currentSrc
+    </script>
+  </body>
+</html>
